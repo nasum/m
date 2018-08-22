@@ -1,0 +1,27 @@
+{
+  "name": "m",
+  "version": "1.0.0",
+  "main": "src/m.ts",
+  "author": "nasum",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack --colors --config ./webpack.config.js",
+    "build:prd": "webpack -p --config ./webpack.config.js",
+    "watch": "webpack --watch --colors --config ./webpack.config.js",
+    "start": "ts-node ./src/m.ts"
+  },
+  "bin": {
+    "m": "bin/m.js"
+  },
+  "private": false,
+  "devDependencies": {
+    "ts-loader": "^4.5.0",
+    "ts-node": "^7.0.0",
+    "typescript": "^2.9.2",
+    "webpack": "^4.17.0",
+    "webpack-cli": "^3.1.0"
+  },
+  "dependencies": {
+    "@types/node": "^10.5.4"
+  }
+}
