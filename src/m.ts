@@ -1,5 +1,5 @@
-import RootCommand from './RootCmd'
+import { Command } from "./lib/command";
 
-const rootCmd: RootCommand = new RootCommand('sample', 'helphelp');
+const rootCmd: Command = new Command('sample', 'helphelp', function(){ console.log('run!') });
 
 rootCmd.run();

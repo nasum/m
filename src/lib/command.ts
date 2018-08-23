@@ -1,13 +1,16 @@
-export default abstract class Command {
+export class Command {
   name: string
   help: string
+  func: Function
 
-  constructor({name, help}) {
+  constructor(name: string, help: string, func: Function) {
     this.name = name
     this.help = help
+    this.func = func
   }
 
   run(): void {
+    this.func()
     this.printHelp()
   }
 
@@ -15,4 +18,8 @@ export default abstract class Command {
     console.log(`Usage: ${this.name}`)
     console.log(`Description: ${this.help}`)
   }
+}
+
+export default {
+  Command
 }
